@@ -1,3 +1,18 @@
+from typing import List
+class TranslatedPart:
+    def __init__(self, text: str, candidates: List[str]):
+        self.text = text
+        self.candidates = candidates
+
+    def __str__(self):
+        return self.text
+
+    def __dict__(self):
+        return {
+            'text': self.text,
+            'candidates': self.candidates,
+        }
+
 class Translated:
     """Translate result object
 
